@@ -65,8 +65,13 @@ int main(int argc, char **argv)
     history.push(editor.createState());
 
     editor.setContent("c");
-    editor.restore(history.pop());
 
+    std::cout << editor.getContent() << std::endl;
+
+    editor.restore(history.pop());
+    std::cout << editor.getContent() << std::endl;
+
+    editor.restore(history.pop());
     std::cout << editor.getContent() << std::endl;
 
     return 0;
